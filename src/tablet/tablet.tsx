@@ -11,8 +11,9 @@ const Tablet = () => {
         <div className="col-2">Dead</div>
       </div>
 
-      {!cancel &&
-       <MainPanel />
+      {cancel
+       ? <MainPanel />
+       : <CancelReasonPanel />
       }
     </>
   );
@@ -41,6 +42,28 @@ const MainPanel = () => {
         </div>
         <div className="col">
           <button type="button" className="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const CancelReasonPanel = () => {
+  return (
+    <>
+      <div className="row">
+        <h2>Cancel Round Reason</h2>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <button type="button" className="btn btn-danger">NO SPIN</button>
+        </div>
+        <div className="col">
+          <button type="button" className="btn btn-danger">BALL OUT</button>
+        </div>
+        <div className="col">
+          <button type="button" className="btn btn-danger">WHEEL CLEAN</button>
         </div>
       </div>
     </>
