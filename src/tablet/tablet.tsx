@@ -1,4 +1,7 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux'
+import { setManualState } from '../redux/actions';
+import { MANUAL_ACTIONS } from '../constants'
 
 const Tablet = () => {
   const cancel = false
@@ -13,10 +16,10 @@ const Tablet = () => {
 
       {cancel
        ? <MainPanel />
-       : <CancelReasonPanel />
+        : <MultiPanel />
       }
     </>
-  );
+  )
 }
 
 const MainPanel = () => {
@@ -70,4 +73,24 @@ const CancelReasonPanel = () => {
   )
 }
 
-export default Tablet;
+const MultiPanel = () => {
+  return (
+    <>
+      <div className="row">
+        <h2>Are you sure you want to CANCEL?</h2>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <button type="button" className="btn btn-danger btn-lg btn-block">YES</button>
+        </div>
+        <div className="col">
+          <button type="button" className="btn btn-secondary btn-lg btn-block">NO</button>
+        </div>
+      </div>
+    </>
+  )
+}
+
+
+export default connect(null, { setManualState }) (Tablet)
