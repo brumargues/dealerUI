@@ -1,0 +1,245 @@
+.header {
+  height: 13vh;
+  border-bottom: .09vh solid #9e9fa2;
+  font-size: 4.6vh;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .clock {
+    margin-left: 1.9vw;
+  }
+
+  .col-2{
+    &:nth-child(2) {
+      border-right: .05vw solid #9e9fa2;
+      text-align: right;
+    }
+
+    &.green {
+      color: #019609;
+    }
+
+    &.red {
+      color: #bf0000;
+    }
+  }
+}
+
+.multi-panel {
+  height: 75vh;
+
+  .status-timer {
+    height: 40vh;
+    border-bottom: .05vw solid #9e9fa2;
+    margin-bottom: 5vh;
+
+    .round-status {
+      align-items: center;
+      padding-left: 3.25vw;
+      display: flex;
+      border-right: .05vw solid #9e9fa2;
+
+      .status-text {
+        font-size: 13.8vh;
+        font-weight: bold;
+        transition : color 500ms ease-out;
+      }
+
+      &.green {
+        color: #019609;
+      }
+
+      &.yellow {
+        color: #f7b500;
+      }
+
+      &.red {
+        color: #bf0000;
+      }
+    }
+
+    .timer {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .circle {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        width: 17vw;
+        position: relative;
+        border: solid .65vw #019609;
+        transition: border 500ms ease-out;
+
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
+
+         &.green {
+           border-color: #019609;
+         }
+
+         &.yellow {
+           border-color: #f7b500;
+         }
+
+         &.red {
+           border-color: #bf0000;
+         }
+
+        &-inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          text-align: center;
+        }
+
+        &-text {
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 20vh;
+          line-height: 20vh;
+          font-size: 20vh;
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+
+  .winning-number-panel {
+    height: 25.05vh;
+    border-top: .05vw solid #9e9fa2;
+    border-bottom: .05vw solid #9e9fa2;
+
+    .winning-number {
+      display: flex;
+      border-right: .05vw solid #9e9fa2;
+      align-items: baseline;
+
+      .number {
+        height: 18vh;
+        line-height: 18vh;
+        font-size: 18vh;
+        font-weight: bold;
+        margin: 4vh 0 0 1.9vw;
+      }
+
+      .positions {
+        height: 8vh;
+        line-height: 8vh;
+        font-size: 8vh;
+        font-weight: bold;
+        margin-left: 1.9vw;
+        text-transform: uppercase;
+      }
+
+      &-sections {
+        padding: 5.5vh 2.5vw;
+
+        .row {
+          font-size: 5vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+
+        .col {
+          height: 7vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:first-child {
+            border-right: .05vw solid #9e9fa2;
+          }
+
+          &:last-child {
+            border-left: .05vw solid #9e9fa2;
+          }
+        }
+
+        .labels {
+          border-bottom: .05vw solid #9e9fa2;
+        }
+
+        .sections {
+          font-weight: bold;
+
+          .col {
+            &:last-child {
+              padding-top: 1.1vh;
+              font-size: 3vh;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: .05vw solid #9e9fa2;
+  height: 13vh;
+
+  &.action-buttons {
+    .col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn {
+        font-size: 3.5vh;
+        padding: 1vh 2vw;
+      }
+    }
+  }
+}
+
+.modal {
+  padding: 0 !important;
+
+  .modal-dialog {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    margin: 0;
+
+    .modal-content {
+      height: 100vh;
+      margin: 0;
+      background-color: #22242b;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      border: 0;
+
+      .modal-body {
+        max-height: 25vh;
+        width: 75vw;
+        line-height: 10vh;
+        text-align: center;
+
+        .row {
+          margin-top: 10vh;
+
+          .btn {
+            padding: 3vh 1vw;
+            font-size: 5vh;
+          }
+        }
+      }
+    }
+  }
+}
