@@ -1,44 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dealer UI
 
-## Available Scripts
+A frontend interface project for casino dealers that provides real-time visualization for auto and manual roulette tables.
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+Dealer UI is a multi-screen application designed for casino environments that connects to the casino's API to interface with both automatic and manual roulette tables in the live studio. The application displays information on both TV screens (for dealer viewing) and tablets (for dealer control).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Key Features
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **Multi-device Support**: Displays on both TV screens and dealer tablets
+- **Real-time Visualization**: Shows current game status, bet data, and results
+- **Dealer Controls**: Interface for dealers to:
+  - Start a new round
+  - Stop the current round
+  - Cancel a round
+  - Close the table
+- **API Integration**: Connects to the casino's backend systems to fetch and push game data
 
-### `yarn test`
+## Architecture
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application follows a component-based architecture:
 
-### `yarn build`
+- **TV Display**: Shows game status, history, and statistics
+- **Tablet Interface**: Control panel for dealers with touch-optimized interface
+- **API Service**: Handles communication with the casino backend
+- **State Management**: Central store for application state
+- **Event Bus**: Manages real-time updates and synchronization between devices
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This project is proprietary and confidential. Unauthorized copying, transferring, or reproduction of the contents of this project, via any medium is strictly prohibited.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
